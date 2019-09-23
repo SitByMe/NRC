@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">@color/color_white</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorWindowBackground">#F1F1F1</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="color_pink">#FF4975</color>
+    <color name="color_gray_77">#777777</color>
+    <color name="color_gray_80">#808080</color>
+    <color name="color_gray_91">#919191</color>
+    <color name="color_gray_cc">#CCCCCC</color>
+    <color name="color_gray_d9">#D9D9D9</color>
+    <color name="color_gray_f5">#F5F5F5</color>
+
+    <color name="color_btn_enable">@color/color_pink</color>
+    <color name="color_btn_unable">@color/color_gray_d9</color>
+
+    <!-- text colors -->
+    <color name="text_color_pink">@color/colorAccent</color>
+    <color name="text_color_black1b">#1B1B1B</color>
+    <color name="text_color_black30">#303030</color>
+    <color name="text_color_black33">#333333</color>
+    <color name="text_color_black47">#474747</color>
+
+    <color name="text_color_gray5e">#5E5E5E</color>
+    <color name="text_color_gray77">@color/color_gray_77</color>
+    <color name="text_color_gray80">@color/color_gray_80</color>
+    <color name="text_color_gray91">@color/color_gray_91</color>
+    <color name="text_color_grayf5">@color/color_gray_f5</color>
+
+    <color name="text_color_white">@color/color_white</color>
+
+    <!-- bg colors -->
+    <color name="bg_color_white">@color/color_white</color>
+
+    <color name="bg_color_gray_cc">@color/color_gray_cc</color>
+    <color name="bg_color_gray_d9">@color/color_gray_d9</color>
+
+    <color name="bg_color_pink">@color/color_pink</color>
+
+    <color name="text_color_hint">#CCCCCC</color>
+    <color name="line_black">#F9F9F9</color>
+</resources>

@@ -1,0 +1,58 @@
+apply plugin: 'com.android.library'
+
+android {
+    def apiKey = "s&Gf%S8=7fSD=7!d"
+    def globalConfiguration = rootProject.extensions.getByName("ext")
+    compileSdkVersion androidCompileSdkVersion
+
+    defaultConfig {
+        minSdkVersion globalConfiguration.androidMinSdkVersion
+        targetSdkVersion globalConfiguration.androidTargetSdkVersion
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        debug {
+            buildConfigField "Boolean", "IS_DEBUG", "true"
+            buildConfigField "String", "API_KEY", "\"${apiKey}\""
+            buildConfigField "Boolean", "USE_DECODE", "true"
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            buildConfigField "Boolean", "IS_DEBUG", "false"
+            buildConfigField "String", "API_KEY", "\"${apiKey}\""
+            buildConfigField "Boolean", "USE_DECODE", "true"
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    def android = rootProject.ext.android
+    implementation android.appcompat_v7
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+
+    api 'io.reactivex.rxjava2:rxjava:2.2.2'
+    api 'com.squareup.retrofit2:retrofit:2.4.0'
+    api 'com.squareup.retrofit2:converter-gson:2.6.0'
+    api 'com.squareup.retrofit2:converter-scalars:2.4.0'
+    api 'com.squareup.retrofit2:adapter-rxjava2:2.4.0'
+    api 'io.reactivex.rxjava2:rxandroid:2.1.0'
+
+    // chrome 拦截url
+    implementation 'com.facebook.stetho:stetho:1.5.0'
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.0'
+
+    // rxLifecycle生命周期管理，防止请求回调时发生内存泄漏
+    api 'com.trello.rxlifecycle2:rxlifecycle:2.2.1'
+    api 'com.trello.rxlifecycle2:rxlifecycle-components:2.2.1'
+}

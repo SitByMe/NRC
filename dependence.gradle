@@ -1,0 +1,14 @@
+ext {
+
+    androidBuildToolsVersion = "28.0.3"
+    androidCompileSdkVersion = 28
+    androidMinSdkVersion = 19
+    androidTargetSdkVersion = 23
+
+    supportLibraryVersion = '28.0.0'
+
+    gsyPlayerVersion = "6.0.3"
+    android = [
+            appcompat_v7: "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    ]
+}

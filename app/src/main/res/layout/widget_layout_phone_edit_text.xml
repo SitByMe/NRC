@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_icon"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@mipmap/ic_small_username" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_user_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_weight="1"
+        android:background="@null"
+        android:hint="请输入手机号"
+        android:inputType="phone"
+        android:lines="1"
+        android:maxLength="11"
+        android:singleLine="true"
+        android:textColor="@color/text_color_black33"
+        android:textSize="16sp" />
+
+</LinearLayout>

@@ -1,0 +1,112 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+static def releaseTime() {
+    return new Date().format("yyyy-MM-dd", TimeZone.getTimeZone("GMT+8"))
+}
+
+android {
+//    def developServer = "http://192.168.1.222:8001/"
+    def developServer = "http://www.znysc.top/"
+    def releaseServer = "http://www.znysc.top/"
+
+    def apiKey = "TWMyN9I1SeOFrBS="
+
+    compileSdkVersion 29
+    buildToolsVersion "29.0.2"
+    defaultConfig {
+        applicationId "com.ta.netredcat"
+        minSdkVersion 19
+        targetSdkVersion 29
+        versionCode 1
+        versionName "100.1"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+            // 移除无用的resource文件
+            //shrinkResources true
+            //对打包的应用程序进行优化
+            //zipAlignEnabled true
+//            signingConfig signingConfigs.release
+            buildConfigField "String", "BASE_IMG", "\"${developServer}\""
+            buildConfigField "Boolean", "IS_DEBUG", "true"
+            buildConfigField "String", "API_HOST", "\"${developServer}\""
+            buildConfigField "Boolean", "SHOW_BUGLY_LOG", "true"
+            buildConfigField "String", "API_KEY", "\"${apiKey}\""
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled true
+            // 移除无用的resource文件
+            shrinkResources true
+            //对打包的应用程序进行优化
+            zipAlignEnabled true
+//            signingConfig signingConfigs.release
+            // true - 打开资源压缩
+            shrinkResources true
+            buildConfigField "String", "BASE_IMG", "\"${releaseServer}\""
+            buildConfigField "Boolean", "IS_DEBUG", "true"
+            buildConfigField "String", "API_HOST", "\"${releaseServer}\""
+            buildConfigField "Boolean", "SHOW_BUGLY_LOG", "false"
+            buildConfigField "String", "API_KEY", "\"${apiKey}\""
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro', "proguard-fresco.pro", "proguard-glide.pro", "proguard-jpush.pro"
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+    //修改app 名称
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "tianao${variant.versionCode}-${variant.versionName}-${releaseTime()}.apk"
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.core:core-ktx:1.0.2'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation project(path: ':net')
+
+    implementation 'me.jessyan:autosize:1.1.2'
+
+    implementation 'com.blankj:utilcodex:1.25.9'
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    /* views */
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0-beta04'
+    implementation 'com.github.pinguo-zhouwei:MZBannerView:v2.0.2'
+
+    // 替代Sp的跨进程存储库
+    implementation 'net.grandcentrix.tray:tray:0.12.0'
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'  //1.0.5及以前版本的老用户升级需谨慎，API改动过大
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+
+    implementation 'com.github.bumptech.glide:glide:4.9.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
+
+    // permission
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+}

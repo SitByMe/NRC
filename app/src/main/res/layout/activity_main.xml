@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nsv_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_color_white"
+    android:scrollbars="none"
+    tools:context=".ui.main.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/notice_app_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/app_name"
+                android:textColor="@color/text_color_black33"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/iv_user_face"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="12dp"
+                android:src="@mipmap/ic_def_head"
+                app:layout_constraintBottom_toBottomOf="@id/notice_app_name"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/notice_app_name" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.zhouwei.mzbanner.MZBannerView
+            android:id="@+id/ad_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:canLoop="true"
+            app:indicatorAlign="center"
+            app:indicatorPaddingLeft="32pt"
+            app:indicatorPaddingRight="32pt"
+            app:middle_page_cover="true"
+            app:open_mz_mode="false" />
+
+        <com.zhouwei.mzbanner.MZBannerView
+            android:id="@+id/banner"
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="12dp"
+            app:canLoop="true"
+            app:indicatorAlign="center"
+            app:indicatorPaddingLeft="32pt"
+            app:indicatorPaddingRight="32pt"
+            app:middle_page_cover="true"
+            app:open_mz_mode="false" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:overScrollMode="never"
+            android:paddingStart="26dp"
+            android:paddingEnd="26dp"
+            android:scrollbars="none" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
