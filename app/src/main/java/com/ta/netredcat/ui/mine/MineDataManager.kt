@@ -4,11 +4,9 @@ import android.content.Context
 import com.ta.netredcat.data.net.AppObserver
 import com.ta.netredcat.data.net.method.PubHttpMethods
 import com.ta.netredcat.data.net.method.UserHttpMethods
-import com.ta.netredcat.entity.ServiceBeanResult
-import com.ta.netredcat.entity.UserInfoResult
+import com.ta.netredcat.entity.result.ServiceBeanResult
+import com.ta.netredcat.entity.result.UserInfoResult
 import com.ta.netredcat.ui.mvp.AppDataManager
-import com.tianao.module.net.entity.httpResult.AppResult
-import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Consumer
 

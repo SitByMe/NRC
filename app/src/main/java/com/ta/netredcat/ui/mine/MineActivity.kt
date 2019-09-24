@@ -6,8 +6,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.ServiceBeanResult
-import com.ta.netredcat.entity.UserInfoResult
+import com.ta.netredcat.entity.result.ServiceBeanResult
+import com.ta.netredcat.entity.result.UserInfoResult
 import com.ta.netredcat.settings.SettingsActivity
 import com.ta.netredcat.ui.BaseTitleMVPActivity
 import com.ta.netredcat.utils.ShowImageHelper

@@ -1,6 +1,6 @@
 package com.ta.netredcat.ui.cate_prod
 
-import com.ta.netredcat.entity.SubCateResult
+import com.ta.netredcat.entity.result.SubCateResult
 import com.ta.netredcat.ui.mvp.AppView
 
 interface CateProdView : AppView {

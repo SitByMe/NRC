@@ -2,7 +2,7 @@ package com.ta.netredcat.utils.helper
 
 import com.ta.netredcat.BuildConfig
 import com.ta.netredcat.constant.SpConstants
-import com.ta.netredcat.entity.LoginResult
+import com.ta.netredcat.entity.result.LoginResult
 import com.ta.netredcat.utils.SpUtils
 import com.tianao.module.net.entity.httpResult.AppResult
 

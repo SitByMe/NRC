@@ -8,7 +8,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.SubCateResult
+import com.ta.netredcat.entity.result.SubCateResult
 
 class CateProdAdapter(
     mContext: Context,

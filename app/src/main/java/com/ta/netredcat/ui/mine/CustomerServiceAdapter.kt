@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.blankj.utilcode.util.ToastUtils
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.ServiceBeanResult
+import com.ta.netredcat.entity.result.ServiceBeanResult
 import com.ta.netredcat.view.CustomerServiceView
 
 class CustomerServiceAdapter(

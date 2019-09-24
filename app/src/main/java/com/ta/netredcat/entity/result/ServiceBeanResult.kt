@@ -1,4 +1,4 @@
-package com.ta.netredcat.entity
+package com.ta.netredcat.entity.result
 
 import com.google.gson.annotations.SerializedName
 

@@ -2,7 +2,7 @@
 <resources>
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">@color/color_white</color>
-    <color name="colorAccent">#D81B60</color>
+    <color name="colorAccent">@color/color_pink</color>
     <color name="colorWindowBackground">#F1F1F1</color>
 
     <color name="transparent">#00000000</color>

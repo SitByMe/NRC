@@ -17,7 +17,7 @@ abstract class BaseActivity : AppCompatActivity() {
         setContentView(setContentLayout())
     }
 
-    fun closeAdapt(): Boolean {
+    private fun closeAdapt(): Boolean {
         return false
     }
 

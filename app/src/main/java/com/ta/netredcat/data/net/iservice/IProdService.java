@@ -1,6 +1,6 @@
 package com.ta.netredcat.data.net.iservice;
 
-import com.ta.netredcat.entity.SubCateResult;
+import com.ta.netredcat.entity.result.SubCateResult;
 import com.tianao.module.net.entity.httpResult.AppResult;
 
 import io.reactivex.Observable;

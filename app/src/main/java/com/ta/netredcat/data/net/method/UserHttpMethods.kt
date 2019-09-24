@@ -1,25 +1,20 @@
 package com.ta.netredcat.data.net.method
 
-import android.graphics.Bitmap
-import android.graphics.BitmapFactory
 import com.blankj.utilcode.util.DeviceUtils
 import com.ta.netredcat.constant.Constants
 import com.ta.netredcat.data.net.HttpCoreHelper
 import com.ta.netredcat.data.net.iservice.IUserService
-import com.ta.netredcat.entity.LoginResult
-import com.ta.netredcat.entity.UserInfoResult
+import com.ta.netredcat.entity.result.LoginResult
+import com.ta.netredcat.entity.result.UserInfoResult
+import com.ta.netredcat.entity.result.MyFeedBackResult
 import com.tianao.module.net.entity.httpResult.AppResult
 import com.tianao.module.net.entity.httpResult.EmptyBean
 import com.tianao.module.net.http.BaseHttpMethods
 
 import io.reactivex.Observer
-import io.reactivex.Scheduler
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Consumer
-import io.reactivex.functions.Function
-import io.reactivex.schedulers.Schedulers
 import okhttp3.ResponseBody
-import java.io.File
 
 class UserHttpMethods : BaseHttpMethods() {
     companion object {
@@ -28,14 +23,14 @@ class UserHttpMethods : BaseHttpMethods() {
             deviceId: String, time: String, before: Consumer<Disposable>,
             observer: Observer<ResponseBody>
         ) {
-           /* HttpCoreHelper.getService(IUserService::class.java).requestCheckCode(deviceId, time)
-                .subscribeOn(Schedulers.newThread())
-                .map(
-                    Function<ResponseBody, Bitmap> {
-                        var bitmap1: Bitmap! = BitmapFactory.decodeStream(it.byteStream())
+            /* HttpCoreHelper.getService(IUserService::class.java).requestCheckCode(deviceId, time)
+                 .subscribeOn(Schedulers.newThread())
+                 .map(
+                     Function<ResponseBody, Bitmap> {
+                         var bitmap1: Bitmap! = BitmapFactory.decodeStream(it.byteStream())
 
-                    }
-                )*/
+                     }
+                 )*/
 
             httpSubscribe(
                 HttpCoreHelper.getService(IUserService::class.java, false).requestCheckCode(
@@ -90,6 +85,17 @@ class UserHttpMethods : BaseHttpMethods() {
                     ), before, observer
                 )
             }
+        }
+
+        fun requestMyFeedBack(
+            before: Consumer<Disposable>,
+            observer: Observer<AppResult<MyFeedBackResult>>
+        ) {
+            httpSubscribe(
+                HttpCoreHelper.getService(IUserService::class.java).requestMyFeedBack(
+                    Constants.USELESS
+                ), before, observer
+            )
         }
     }
 }

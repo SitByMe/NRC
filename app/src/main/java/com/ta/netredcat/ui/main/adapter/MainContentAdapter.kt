@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.blankj.utilcode.util.ActivityUtils
 
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.HomeDataResult
+import com.ta.netredcat.entity.result.HomeDataResult
 import com.ta.netredcat.ui.cate_prod.CateProdActivity
 import com.ta.netredcat.utils.ShowImageHelper
 import com.ta.netredcat.view.recyclerview.SimpleDividerItemDecoration

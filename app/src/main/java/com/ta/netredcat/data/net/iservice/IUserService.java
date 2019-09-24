@@ -1,7 +1,8 @@
 package com.ta.netredcat.data.net.iservice;
 
-import com.ta.netredcat.entity.LoginResult;
-import com.ta.netredcat.entity.UserInfoResult;
+import com.ta.netredcat.entity.result.LoginResult;
+import com.ta.netredcat.entity.result.UserInfoResult;
+import com.ta.netredcat.entity.result.MyFeedBackResult;
 import com.tianao.module.net.entity.httpResult.AppResult;
 import com.tianao.module.net.entity.httpResult.EmptyBean;
 
@@ -64,4 +65,11 @@ public interface IUserService {
     @FormUrlEncoded
     @POST("api/myInfo")
     Observable<AppResult<UserInfoResult>> requestUserInfo(@Field("useless") String useless);
+
+    /**
+     * 获取我的反馈意见
+     */
+    @FormUrlEncoded
+    @POST("api/msgList")
+    Observable<AppResult<MyFeedBackResult>> requestMyFeedBack(@Field("useless") String useless);
 }

@@ -1,6 +1,6 @@
 package com.ta.netredcat.ui.main
 
-import com.ta.netredcat.entity.HomeDataResult
+import com.ta.netredcat.entity.result.HomeDataResult
 import com.ta.netredcat.ui.mvp.AppView
 
 interface MainView : AppView {

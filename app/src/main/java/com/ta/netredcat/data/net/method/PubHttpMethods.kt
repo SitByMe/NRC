@@ -3,15 +3,14 @@ package com.ta.netredcat.data.net.method
 import com.ta.netredcat.constant.Constants
 import com.ta.netredcat.data.net.HttpCoreHelper
 import com.ta.netredcat.data.net.iservice.IPubService
-import com.ta.netredcat.entity.HomeDataResult
-import com.ta.netredcat.entity.ServiceBeanResult
+import com.ta.netredcat.entity.result.HomeDataResult
+import com.ta.netredcat.entity.result.ServiceBeanResult
 import com.tianao.module.net.entity.httpResult.AppResult
 import com.tianao.module.net.entity.httpResult.EmptyBean
 import com.tianao.module.net.http.BaseHttpMethods
 import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Consumer
-import retrofit2.http.Field
 
 class PubHttpMethods : BaseHttpMethods() {
     companion object {

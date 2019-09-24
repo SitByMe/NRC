@@ -3,7 +3,7 @@ package com.ta.netredcat.ui.main
 import android.content.Context
 import com.blankj.utilcode.util.AppUtils
 import com.ta.netredcat.data.net.AppObserver
-import com.ta.netredcat.entity.HomeDataResult
+import com.ta.netredcat.entity.result.HomeDataResult
 import com.ta.netredcat.ui.mvp.AppPresenter
 import com.tianao.module.net.entity.httpResult.AppResult
 import com.tianao.module.net.http.ObserverOnNextListener

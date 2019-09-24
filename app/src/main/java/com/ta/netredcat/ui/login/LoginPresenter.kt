@@ -1,15 +1,12 @@
 package com.ta.netredcat.ui.login
 
 import android.content.Context
-import com.blankj.utilcode.util.SPUtils
 import com.blankj.utilcode.util.ToastUtils
-import com.ta.netredcat.constant.SpConstants
 import com.ta.netredcat.data.net.AppObserver
 import com.ta.netredcat.data.net.method.UserHttpMethods
-import com.ta.netredcat.entity.LoginResult
+import com.ta.netredcat.entity.result.LoginResult
 
 import com.ta.netredcat.ui.mvp.AppPresenter
-import com.ta.netredcat.utils.SpUtils
 import com.ta.netredcat.utils.helper.SpHelper
 import com.tianao.module.net.entity.httpResult.AppResult
 import com.tianao.module.net.http.ObserverOnNextListener

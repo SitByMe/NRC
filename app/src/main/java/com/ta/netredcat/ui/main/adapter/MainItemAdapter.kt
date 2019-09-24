@@ -10,7 +10,7 @@ import androidx.appcompat.widget.AppCompatTextView
 import androidx.recyclerview.widget.RecyclerView
 
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.HomeDataResult
+import com.ta.netredcat.entity.result.HomeDataResult
 import com.ta.netredcat.utils.ShowImageHelper
 import java.lang.StringBuilder
 import kotlin.math.ceil

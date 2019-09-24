@@ -1,4 +1,4 @@
-package com.ta.netredcat.entity;
+package com.ta.netredcat.entity.result;
 
 public class SendCodeResult {
     private String rand;

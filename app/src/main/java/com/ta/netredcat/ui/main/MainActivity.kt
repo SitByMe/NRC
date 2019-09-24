@@ -12,7 +12,7 @@ import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.ta.netredcat.App
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.HomeDataResult
+import com.ta.netredcat.entity.result.HomeDataResult
 import com.ta.netredcat.ui.BaseMVPActivity
 import com.ta.netredcat.ui.mine.MineActivity
 import com.ta.netredcat.ui.main.adapter.MainContentAdapter

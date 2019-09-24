@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.blankj.utilcode.util.ToastUtils
 import com.ta.netredcat.App
 import com.ta.netredcat.R
-import com.ta.netredcat.entity.SubCateResult
+import com.ta.netredcat.entity.result.SubCateResult
 import com.ta.netredcat.ui.BaseTitleMVPActivity
 import com.ta.netredcat.ui.cate_prod.adapter.CateProdAdapter
 import com.ta.netredcat.ui.recharge_must_see.RechargeMustSeeActivity

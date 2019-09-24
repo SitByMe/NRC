@@ -19,9 +19,17 @@ class FeedBackActivity : BaseTitleActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-
         fragmentList.add(FeedBackFragment())
         fragmentList.add(MyFeedFragment())
+        tab_layout.setViewPager(vp_feed_back, arrayOf("意见反馈", "我的反馈"), this, fragmentList)
+        val notFeedback = intent.getIntExtra("notFeedback", 0)
+        if (notFeedback > 0) {
+            tab_layout.showDot(2)
+            tab_layout.setMsgMargin(2, 45f, -6f)
+        } else {
+            tab_layout.hideMsg(2)
+        }
+
         val fragmentAdapter = FeedBackPageAdapter(supportFragmentManager, fragmentList)
         vp_feed_back.adapter = fragmentAdapter
         vp_feed_back.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
@@ -33,6 +41,9 @@ class FeedBackActivity : BaseTitleActivity() {
                 positionOffset: Float,
                 positionOffsetPixels: Int
             ) {
+                /*if (position == 2) {
+                    tab_layout.hideMsg(2)
+                }*/
             }
 
             override fun onPageSelected(position: Int) {

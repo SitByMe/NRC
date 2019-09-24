@@ -1,7 +1,7 @@
 package com.ta.netredcat.data.net.iservice;
 
-import com.ta.netredcat.entity.HomeDataResult;
-import com.ta.netredcat.entity.ServiceBeanResult;
+import com.ta.netredcat.entity.result.HomeDataResult;
+import com.ta.netredcat.entity.result.ServiceBeanResult;
 import com.tianao.module.net.entity.httpResult.AppResult;
 import com.tianao.module.net.entity.httpResult.EmptyBean;
 

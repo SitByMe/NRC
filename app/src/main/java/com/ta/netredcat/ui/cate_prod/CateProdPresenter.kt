@@ -2,8 +2,7 @@ package com.ta.netredcat.ui.cate_prod
 
 import android.content.Context
 import com.ta.netredcat.data.net.AppObserver
-import com.ta.netredcat.entity.HomeDataResult
-import com.ta.netredcat.entity.SubCateResult
+import com.ta.netredcat.entity.result.SubCateResult
 import com.ta.netredcat.ui.mvp.AppPresenter
 import com.tianao.module.net.entity.httpResult.AppResult
 import com.tianao.module.net.http.ObserverOnNextListener
