@@ -20,7 +20,8 @@
         android:usesCleartextTraffic="true"
         tools:ignore="GoogleAppIndexingWarning,UnusedAttribute"
         tools:replace="android:icon">
-        <activity android:name=".ui.modify_user_info.ModifyUserInfoActivity"></activity>
+        <activity android:name=".ui.modify_user_info.Modify2Activity"></activity>
+        <activity android:name=".ui.modify_user_info.ModifyUserInfoActivity" />
         <activity android:name=".ui.feed_back.FeedBackActivity" />
         <activity android:name=".ui.recharge_must_see.RechargeMustSeeActivity" />
         <activity android:name=".ui.cate_prod.CateProdActivity" />
