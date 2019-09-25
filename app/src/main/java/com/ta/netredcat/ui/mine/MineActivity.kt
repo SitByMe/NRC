@@ -10,6 +10,7 @@ import com.ta.netredcat.entity.result.ServiceBeanResult
 import com.ta.netredcat.entity.result.UserInfoResult
 import com.ta.netredcat.settings.SettingsActivity
 import com.ta.netredcat.ui.BaseTitleMVPActivity
+import com.ta.netredcat.ui.modify_user_info.ModifyUserInfoActivity
 import com.ta.netredcat.utils.ShowImageHelper
 import kotlinx.android.synthetic.main.activity_basetitle.*
 import kotlinx.android.synthetic.main.activity_mine.*
@@ -53,6 +54,7 @@ class MineActivity : BaseTitleMVPActivity<MinePresenter>(), MineView {
 
     override fun onResume() {
         super.onResume()
+        cl_head.setOnClickListener { ActivityUtils.startActivity(ModifyUserInfoActivity::class.java) }
         title_bar.setOnClickListener { ActivityUtils.startActivity(SettingsActivity::class.java) }
         cl_message_center.setOnClickListener { ToastUtils.showShort("消息中心") }
         cl_common_id.setOnClickListener { ToastUtils.showShort("常用ID") }

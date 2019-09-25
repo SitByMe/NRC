@@ -53,7 +53,7 @@ class LoginPresenter(mContext: Context, mView: LoginView) :
 
                 override fun onNext(result: AppResult<LoginResult>) {
                     ToastUtils.showShort("登录成功")
-                    SpHelper.putUserInfo(result)
+                    SpHelper.initUserInfo(result)
                     view.finishActivity()
                 }
             })

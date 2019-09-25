@@ -8,6 +8,7 @@
     tools:context=".ui.mine.MineActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cl_head"
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@color/bg_color_white">

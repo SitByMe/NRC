@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.modify_user_info.ModifyUserInfoActivity">
+
+    <RelativeLayout
+        android:id="@+id/rl_head_icon"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_color_white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:text="头像"
+            android:textColor="@color/text_color_black30"
+            android:textSize="16sp" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_user_face"
+            android:layout_width="49dp"
+            android:layout_height="49dp"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            android:layout_toStartOf="@+id/right"
+            android:textColor="@color/text_color_black33" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:src="@mipmap/ic_gray_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/phoneLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/bg_color_white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:text="手机号"
+            android:textColor="@color/text_color_black30"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:layout_toStartOf="@id/right4"
+            android:textColor="@color/text_color_gray77"
+            android:textSize="16sp"
+            tools:text="1311111133333" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/right4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:src="@mipmap/ic_gray_right" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/nickNameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_color_white">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:text="昵称"
+            android:textColor="@color/text_color_black30"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            android:layout_toStartOf="@+id/right2"
+            android:text="未设置"
+            android:textColor="@color/text_color_black30"
+            android:textSize="16sp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/right2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="13dp"
+            android:src="@mipmap/ic_gray_right" />
+    </RelativeLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/modifyPassLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/bg_color_white"
+        android:paddingTop="22dp">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="13dp"
+            android:text="简介"
+            android:textColor="@color/text_color_black30"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_introduction_length"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="11dp"
+            android:textColor="@color/text_color_gray77"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="0/50" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_introduction"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:minLines="3"
+            android:padding="13dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_introduction_length" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
+        style="@style/def_btn_style"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="13dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginRight="13dp"
+        android:text="登录"
+        android:textSize="16sp" />
+</LinearLayout>

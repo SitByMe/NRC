@@ -15,4 +15,5 @@ public class SpConstants {
     public static final String NICK_NAME = "NICK_NAME";
     public static final String SEX = "SEX";
     public static final String AUTOGRAPH = "AUTOGRAPH";
+    public static final String INTRODUCTION = "INTRODUCTION";
 }
