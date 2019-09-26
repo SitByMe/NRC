@@ -23,7 +23,7 @@ import com.zhouwei.mzbanner.MZBannerView
 import com.zhouwei.mzbanner.holder.MZViewHolder
 import kotlinx.android.synthetic.main.activity_main.*
 
-class MainActivity : BaseMVPActivity<MainPresener>(), MainView {
+class MainActivity : BaseMVPActivity<MainPresenter>(), MainView {
 
     private lateinit var adBanner: MZBannerView<HomeDataResult.RollLogBean>
 
@@ -41,8 +41,8 @@ class MainActivity : BaseMVPActivity<MainPresener>(), MainView {
 
     override fun setContentLayout(): Int = R.layout.activity_main
 
-    override fun initPresenter(): MainPresener? {
-        return MainPresener(this, this)
+    override fun initPresenter(): MainPresenter? {
+        return MainPresenter(this, this)
     }
 
     private lateinit var banner: MZBannerView<HomeDataResult.BannerBean>

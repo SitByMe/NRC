@@ -29,4 +29,13 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     protected abstract fun setContentLayout(): Int
+
+    fun showLoadingView() {
+    }
+
+    fun showLoadingView(lightTextMode: Boolean) {
+    }
+
+    fun dismissLoadingView() {
+    }
 }

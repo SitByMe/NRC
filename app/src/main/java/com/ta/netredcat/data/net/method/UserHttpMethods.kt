@@ -15,6 +15,7 @@ import io.reactivex.Observer
 import io.reactivex.disposables.Disposable
 import io.reactivex.functions.Consumer
 import okhttp3.ResponseBody
+import retrofit2.http.Field
 
 class UserHttpMethods : BaseHttpMethods() {
     companion object {
@@ -94,6 +95,18 @@ class UserHttpMethods : BaseHttpMethods() {
             httpSubscribe(
                 HttpCoreHelper.getService(IUserService::class.java).requestMyFeedBack(
                     Constants.USELESS
+                ), before, observer
+            )
+        }
+
+        fun modifyUserInfo(
+            face: String, nickname: String, autograph: String,
+            before: Consumer<Disposable>,
+            observer: Observer<AppResult<EmptyBean>>
+        ) {
+            httpSubscribe(
+                HttpCoreHelper.getService(IUserService::class.java).modifyUserInfo(
+                    face, nickname, autograph
                 ), before, observer
             )
         }

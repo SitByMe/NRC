@@ -9,7 +9,7 @@ import com.tianao.module.net.entity.httpResult.AppResult
 import com.tianao.module.net.http.ObserverOnNextListener
 import io.reactivex.functions.Consumer
 
-class MainPresener(mContext: Context, mView: MainView) :
+class MainPresenter(mContext: Context, mView: MainView) :
     AppPresenter<MainView, MainDataManager>() {
     init {
         attachView(mView)

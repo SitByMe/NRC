@@ -72,4 +72,15 @@ public interface IUserService {
     @FormUrlEncoded
     @POST("api/msgList")
     Observable<AppResult<MyFeedBackResult>> requestMyFeedBack(@Field("useless") String useless);
+
+    /**
+     * 修改用户资料
+     *
+     * @param face      用户头像
+     * @param nickname  用户昵称
+     * @param autograph 签名
+     */
+    @FormUrlEncoded
+    @POST("api/editProfile")
+    Observable<AppResult<EmptyBean>> modifyUserInfo(@Field("face") String face, @Field("nickname") String nickname, @Field("autograph") String autograph);
 }

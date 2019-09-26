@@ -31,15 +31,6 @@ abstract class BaseMVPActivity<P : AppPresenter<*, *>> : BaseActivity(), AppView
     }
 
     /* implement from AppView */
-    override fun showLoadingView() {
-    }
-
-    override fun showLoadingView(lightTextMode: Boolean) {
-    }
-
-    override fun dismissLoadingView() {
-    }
-
     override fun finishRefresh() {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }

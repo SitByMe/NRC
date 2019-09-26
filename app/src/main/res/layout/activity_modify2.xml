@@ -15,6 +15,7 @@
         android:layout_height="55dp"
         android:background="@null"
         android:gravity="center_vertical|start"
+        android:hint="输入1-7字，支持中文、英文、数字、符号"
         android:textColor="@color/text_color_black30"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +31,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_input" />
 
     <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_save"
         style="@style/def_btn_style"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
